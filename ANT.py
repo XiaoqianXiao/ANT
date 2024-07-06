@@ -13,7 +13,7 @@ input_session = 'pre'
 runID = str(input_runID).zfill(2)
 subID = str(input_subID).zfill(3)
 sessionID = input_session
-
+current_dir = os.getcwd()
 #%%
 #Initialize the results file
 results_dir = os.path.join(current_dir, 'results')
