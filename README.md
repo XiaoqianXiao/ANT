@@ -20,10 +20,8 @@ Changes including:
 | target image size |  | (win_width * 0.00025, win_height * 0.0006) |
 | Report after experiment | None | RT & ACC |
 
--	About the experiment:
-<img width="1026" alt="image" src="https://github.com/XiaoqianXiao/ANT/assets/23469096/2a61a9dd-310b-4312-b785-b48431838c30">
--	3 cue conditions (no cue/center cue/spatial cue) * 2 target conditions(congruent/incongruent)
-- 	each trail: cue -> fixation-> target -> fixation, fixations on the screen during the whole trail
-- 	each run: 38 trials
-- 	6 runs in total
+- About the experiment:
+	- 3 cue conditions (no cue/center cue/spatial cue) * 2 target conditions(congruent/incongruent)
+	- each trail: cue -> fixation-> target -> fixation, fixations on the screen during the whole trail- each run: 38 trials
+	- 6 runs in total
    	
