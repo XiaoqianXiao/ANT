@@ -1,5 +1,5 @@
-from psychopy import visual, event, core, data, logging, gui
 #%%
+from psychopy import visual, event, core, data, logging, gui
 from tools import *
 import time
 import os
@@ -11,12 +11,10 @@ from datetime import datetime
 input_subID = 0
 input_runID = 1
 input_session = 'pre'
-#%%
 runID = str(input_runID).zfill(2)
 subID = str(input_subID).zfill(3)
 sessionID = input_session
 current_dir = os.getcwd()
-#%%
 expName = 'ANT'
 expInfo = {'subID': subID, 'sessionID': sessionID, 'runID':runID}
 expInfo['time'] = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
