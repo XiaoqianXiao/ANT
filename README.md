@@ -8,8 +8,10 @@ Changes including:
     - in current version:
       - "Please press left point finger when the cental arrowhead points left \n \nand press right pointing finger when the central arrowhead poin right"
   * using norm (Normalized) as the representation units to avoid changes across different screens.
+
+    
 | field | original e-prime version | current version |
-|:-----------------|:-----------------|:-----------------|
+|:----------------|:----------------|:----------------|
 | win size | (640, 480) | full screen |
 | intro text size | 16 | 0.08 |
 | fixation text size | 18 | 0.08 |
