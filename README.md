@@ -30,3 +30,8 @@ Changes including:
 	- each trail: cue -> fixation-> target -> fixation, fixations on the screen during the whole trail- each run: 38 trials
 	- 6 runs in total
    	
+- __Resources for existing ANT scripts__
+  * Please note that all the followings are for Fan et al., 2002
+	- https://github.com/baekgaard/ant
+	- https://github.com/a-hurst/ANT
+	- https://github.com/coneco-lab/modified-ant
