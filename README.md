@@ -1,4 +1,4 @@
-Convert from the e-prime fMRI version ([Fan et al., 2005](https://www.sciencedirect.com/science/article/abs/pii/S1053811905000984?via%3Dihub)).
+Convert from the [e-prime fMRI version](http://people.qc.cuny.edu/Faculty/Jin.Fan/Pages/Downloads.aspx) ([Fan et al., 2005](https://www.sciencedirect.com/science/article/abs/pii/S1053811905000984?via%3Dihub)).
 Changes including:
   * simplify the instruction
     - in original e-prime version:
