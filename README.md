@@ -1,4 +1,4 @@
-- Convert from the [e-prime fMRI version](http://people.qc.cuny.edu/Faculty/Jin.Fan/Pages/Downloads.aspx) ([Fan et al., 2005](https://www.sciencedirect.com/science/article/abs/pii/S1053811905000984?via%3Dihub)).
+- __Convert from the [e-prime fMRI version](http://people.qc.cuny.edu/Faculty/Jin.Fan/Pages/Downloads.aspx) ([Fan et al., 2005](https://www.sciencedirect.com/science/article/abs/pii/S1053811905000984?via%3Dihub)).__
 Changes including:
 
 	* simplify the instruction
@@ -24,7 +24,7 @@ Changes including:
 
 
 
-- About the experiment: <img width="1026" alt="image" src="https://github.com/XiaoqianXiao/ANT/assets/23469096/2a61a9dd-310b-4312-b785-b48431838c30">
+- __About the experiment: <img width="1026" alt="image" src="https://github.com/XiaoqianXiao/ANT/assets/23469096/2a61a9dd-310b-4312-b785-b48431838c30">__
 
 	- 3 cue conditions (no cue/center cue/spatial cue) * 2 target conditions(congruent/incongruent)
 	- each trail: cue -> fixation-> target -> fixation, fixations on the screen during the whole trail- each run: 38 trials
