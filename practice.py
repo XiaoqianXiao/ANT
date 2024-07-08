@@ -86,8 +86,10 @@ run_intro(win, intro_text)
 mean_rt, mean_acc = run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name)
 # Run Goodbye
 run_goodbye(win, goodbye_text)
-mean_rt = round(np.mean(np.ma.masked_equal(rt_list, None)) * 1000)
-mean_acc = round(np.mean(np.ma.masked_equal(acc_list, None)) * 100)
+masked_rt_list = np.ma.masked_equal(rt_list, None)
+masked_acc_list = np.ma.masked_equal(acc_list, None)
+mean_rt = round(np.mean(masked_rt_list) * 1000)
+mean_acc = round(np.mean(masked_acc_list) * 100)
 print("Your mean reaction time is: ", mean_rt, "ms")
 print("Your mean ACC is: ", mean_acc, "%")
 # Save the experiment data
