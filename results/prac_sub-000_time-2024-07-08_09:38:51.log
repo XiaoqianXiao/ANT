@@ -1,0 +1,326 @@
+3.9215 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+3.9364 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1470, 956]. Using actual size
+5.1269 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+5.1273 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa1d947cf10>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa1d947cfa0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1, 1, 1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa1d947cd60>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fa1cbc84760>, multiSample=False, name='window1', numSamples=2, pos=[367.5, 239.0], screen=0, size=array([2940, 1912]), stencilBits=0, stereo=False, title='PsychoPy', units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.1273 	EXP 	window1: backgroundImage = None
+5.1273 	EXP 	window1: backgroundFit = 'cover'
+5.1283 	EXP 	window1: mouseVisible = False
+5.1287 	EXP 	window1: mouseVisible = False
+5.1710 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='DejaVu Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=2352.0)
+5.1711 	EXP 	window1: mouseVisible = False
+5.1773 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='DejaVu Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=2352.0)
+5.1774 	EXP 	window1: mouseVisible = False
+5.1788 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, image=None, interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.0588 , 0.06692]), texRes=128, units='norm', win=Window(...))
+5.1789 	EXP 	window1: mouseVisible = False
+5.1800 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, image=None, interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.735 , 1.1472]), texRes=128, units='norm', win=Window(...))
+5.1801 	EXP 	window1: mouseVisible = False
+5.1828 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=2352.0)
+5.1873 	WARNING 	t of last frame was 60.49ms (=1/16)
+8.4374 	DATA 	Keypress: s
+8.4521 	WARNING 	t of last frame was 3264.86ms (=1/0)
+8.4521 	EXP 	unnamed TextStim: autoDraw = True
+8.4639 	EXP 	unnamed TextStim: autoDraw = False
+8.4639 	EXP 	unnamed TextStim: autoDraw = True
+8.4639 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+8.6675 	WARNING 	t of last frame was 203.53ms (=1/4)
+8.6675 	EXP 	unnamed TextStim: autoDraw = False
+8.6675 	EXP 	unnamed TextStim: autoDraw = True
+13.4792 	WARNING 	t of last frame was 4811.69ms (=1/0)
+13.4792 	EXP 	unnamed TextStim: autoDraw = False
+13.4792 	EXP 	unnamed TextStim: autoDraw = True
+13.4792 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+14.2501 	DATA 	Keypress: f
+14.2547 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+14.2547 	EXP 	unnamed TextStim: autoDraw = False
+14.2547 	EXP 	unnamed TextStim: autoDraw = True
+19.9542 	EXP 	unnamed TextStim: autoDraw = False
+19.9542 	EXP 	unnamed TextStim: autoDraw = True
+19.9674 	EXP 	unnamed TextStim: autoDraw = False
+19.9674 	EXP 	unnamed TextStim: autoDraw = True
+19.9674 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+20.1713 	EXP 	unnamed TextStim: autoDraw = False
+20.1713 	EXP 	unnamed TextStim: autoDraw = True
+21.7311 	EXP 	unnamed TextStim: autoDraw = False
+21.7311 	EXP 	unnamed TextStim: autoDraw = True
+21.7311 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrrrr.bmp'
+22.3733 	DATA 	Keypress: j
+22.3774 	EXP 	unnamed TextStim: autoDraw = False
+22.3774 	EXP 	unnamed TextStim: autoDraw = True
+28.2029 	EXP 	unnamed TextStim: autoDraw = False
+28.2029 	EXP 	unnamed TextStim: autoDraw = True
+28.2136 	EXP 	unnamed TextStim: autoDraw = False
+28.2136 	EXP 	unnamed TextStim: autoDraw = True
+28.2136 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+28.4172 	EXP 	unnamed TextStim: autoDraw = False
+28.4172 	EXP 	unnamed TextStim: autoDraw = True
+33.2268 	EXP 	unnamed TextStim: autoDraw = False
+33.2268 	EXP 	unnamed TextStim: autoDraw = True
+33.2268 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/lllll.bmp'
+33.7582 	DATA 	Keypress: f
+33.7624 	EXP 	unnamed TextStim: autoDraw = False
+33.7624 	EXP 	unnamed TextStim: autoDraw = True
+36.4461 	EXP 	unnamed TextStim: autoDraw = False
+36.4461 	EXP 	unnamed TextStim: autoDraw = True
+36.4601 	EXP 	unnamed TextStim: autoDraw = False
+36.4601 	EXP 	unnamed TextStim: autoDraw = True
+36.4601 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+36.6637 	EXP 	unnamed TextStim: autoDraw = False
+36.6637 	EXP 	unnamed TextStim: autoDraw = True
+41.4696 	EXP 	unnamed TextStim: autoDraw = False
+41.4696 	EXP 	unnamed TextStim: autoDraw = True
+41.4696 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrrrr.bmp'
+42.0943 	DATA 	Keypress: j
+42.0982 	EXP 	unnamed TextStim: autoDraw = False
+42.0982 	EXP 	unnamed TextStim: autoDraw = True
+44.4391 	EXP 	unnamed TextStim: autoDraw = False
+44.4391 	EXP 	unnamed TextStim: autoDraw = True
+44.4486 	EXP 	unnamed TextStim: autoDraw = False
+44.4486 	EXP 	unnamed TextStim: autoDraw = True
+44.4486 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+44.6524 	EXP 	unnamed TextStim: autoDraw = False
+44.6524 	EXP 	unnamed TextStim: autoDraw = True
+44.9572 	EXP 	unnamed TextStim: autoDraw = False
+44.9572 	EXP 	unnamed TextStim: autoDraw = True
+44.9572 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrrrr.bmp'
+45.6100 	DATA 	Keypress: j
+45.6136 	EXP 	unnamed TextStim: autoDraw = False
+45.6136 	EXP 	unnamed TextStim: autoDraw = True
+48.6763 	EXP 	unnamed TextStim: autoDraw = False
+48.6763 	EXP 	unnamed TextStim: autoDraw = True
+48.6857 	EXP 	unnamed TextStim: autoDraw = False
+48.6857 	EXP 	unnamed TextStim: autoDraw = True
+48.6857 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+48.8891 	EXP 	unnamed TextStim: autoDraw = False
+48.8891 	EXP 	unnamed TextStim: autoDraw = True
+49.6939 	EXP 	unnamed TextStim: autoDraw = False
+49.6939 	EXP 	unnamed TextStim: autoDraw = True
+49.6939 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrrrr.bmp'
+50.1665 	DATA 	Keypress: j
+50.1706 	EXP 	unnamed TextStim: autoDraw = False
+50.1706 	EXP 	unnamed TextStim: autoDraw = True
+54.1651 	EXP 	unnamed TextStim: autoDraw = False
+54.1651 	EXP 	unnamed TextStim: autoDraw = True
+54.1749 	EXP 	unnamed TextStim: autoDraw = False
+54.1749 	EXP 	unnamed TextStim: autoDraw = True
+54.1749 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+54.3785 	EXP 	unnamed TextStim: autoDraw = False
+54.3785 	EXP 	unnamed TextStim: autoDraw = True
+56.6861 	EXP 	unnamed TextStim: autoDraw = False
+56.6861 	EXP 	unnamed TextStim: autoDraw = True
+56.6861 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+57.4498 	DATA 	Keypress: f
+57.4536 	EXP 	unnamed TextStim: autoDraw = False
+57.4536 	EXP 	unnamed TextStim: autoDraw = True
+59.6555 	EXP 	unnamed TextStim: autoDraw = False
+59.6555 	EXP 	unnamed TextStim: autoDraw = True
+59.6648 	EXP 	unnamed TextStim: autoDraw = False
+59.6648 	EXP 	unnamed TextStim: autoDraw = True
+59.6648 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+59.8687 	EXP 	unnamed TextStim: autoDraw = False
+59.8687 	EXP 	unnamed TextStim: autoDraw = True
+60.1734 	EXP 	unnamed TextStim: autoDraw = False
+60.1734 	EXP 	unnamed TextStim: autoDraw = True
+60.1734 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+60.6306 	DATA 	Keypress: j
+60.6344 	EXP 	unnamed TextStim: autoDraw = False
+60.6344 	EXP 	unnamed TextStim: autoDraw = True
+64.6434 	EXP 	unnamed TextStim: autoDraw = False
+64.6434 	EXP 	unnamed TextStim: autoDraw = True
+64.6602 	EXP 	unnamed TextStim: autoDraw = False
+64.6602 	EXP 	unnamed TextStim: autoDraw = True
+64.6602 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+64.8637 	EXP 	unnamed TextStim: autoDraw = False
+64.8637 	EXP 	unnamed TextStim: autoDraw = True
+65.4187 	EXP 	unnamed TextStim: autoDraw = False
+65.4187 	EXP 	unnamed TextStim: autoDraw = True
+65.4187 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/llrll.bmp'
+67.4188 	DATA 	No keypress (maxWait exceeded)
+67.4254 	EXP 	unnamed TextStim: autoDraw = False
+67.4254 	EXP 	unnamed TextStim: autoDraw = True
+75.3909 	EXP 	unnamed TextStim: autoDraw = False
+75.3909 	EXP 	unnamed TextStim: autoDraw = True
+75.4016 	EXP 	unnamed TextStim: autoDraw = False
+75.4016 	EXP 	unnamed TextStim: autoDraw = True
+75.4016 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+75.6051 	EXP 	unnamed TextStim: autoDraw = False
+75.6051 	EXP 	unnamed TextStim: autoDraw = True
+76.4099 	EXP 	unnamed TextStim: autoDraw = False
+76.4099 	EXP 	unnamed TextStim: autoDraw = True
+76.4099 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/llrll.bmp'
+78.4101 	DATA 	No keypress (maxWait exceeded)
+78.4146 	EXP 	unnamed TextStim: autoDraw = False
+78.4146 	EXP 	unnamed TextStim: autoDraw = True
+84.3793 	EXP 	unnamed TextStim: autoDraw = False
+84.3793 	EXP 	unnamed TextStim: autoDraw = True
+84.3919 	EXP 	unnamed TextStim: autoDraw = False
+84.3919 	EXP 	unnamed TextStim: autoDraw = True
+84.3919 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+84.5954 	EXP 	unnamed TextStim: autoDraw = False
+84.5954 	EXP 	unnamed TextStim: autoDraw = True
+84.9002 	EXP 	unnamed TextStim: autoDraw = False
+84.9002 	EXP 	unnamed TextStim: autoDraw = True
+84.9002 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+86.9003 	DATA 	No keypress (maxWait exceeded)
+86.9053 	EXP 	unnamed TextStim: autoDraw = False
+86.9053 	EXP 	unnamed TextStim: autoDraw = True
+88.1199 	EXP 	unnamed TextStim: autoDraw = False
+88.1199 	EXP 	unnamed TextStim: autoDraw = True
+88.1290 	EXP 	unnamed TextStim: autoDraw = False
+88.1290 	EXP 	unnamed TextStim: autoDraw = True
+88.1290 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+88.3324 	EXP 	unnamed TextStim: autoDraw = False
+88.3324 	EXP 	unnamed TextStim: autoDraw = True
+88.8871 	EXP 	unnamed TextStim: autoDraw = False
+88.8871 	EXP 	unnamed TextStim: autoDraw = True
+88.8871 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/llrll.bmp'
+90.8872 	DATA 	No keypress (maxWait exceeded)
+90.8927 	EXP 	unnamed TextStim: autoDraw = False
+90.8927 	EXP 	unnamed TextStim: autoDraw = True
+98.8578 	EXP 	unnamed TextStim: autoDraw = False
+98.8578 	EXP 	unnamed TextStim: autoDraw = True
+98.8675 	EXP 	unnamed TextStim: autoDraw = False
+98.8675 	EXP 	unnamed TextStim: autoDraw = True
+98.8675 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+99.0710 	EXP 	unnamed TextStim: autoDraw = False
+99.0710 	EXP 	unnamed TextStim: autoDraw = True
+99.8757 	EXP 	unnamed TextStim: autoDraw = False
+99.8757 	EXP 	unnamed TextStim: autoDraw = True
+99.8757 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrrrr.bmp'
+101.8759 	DATA 	No keypress (maxWait exceeded)
+101.8813 	EXP 	unnamed TextStim: autoDraw = False
+101.8813 	EXP 	unnamed TextStim: autoDraw = True
+103.8469 	EXP 	unnamed TextStim: autoDraw = False
+103.8469 	EXP 	unnamed TextStim: autoDraw = True
+103.8566 	EXP 	unnamed TextStim: autoDraw = False
+103.8566 	EXP 	unnamed TextStim: autoDraw = True
+103.8566 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+104.0600 	EXP 	unnamed TextStim: autoDraw = False
+104.0600 	EXP 	unnamed TextStim: autoDraw = True
+106.3664 	EXP 	unnamed TextStim: autoDraw = False
+106.3664 	EXP 	unnamed TextStim: autoDraw = True
+106.3664 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/llrll.bmp'
+108.3666 	DATA 	No keypress (maxWait exceeded)
+108.3719 	EXP 	unnamed TextStim: autoDraw = False
+108.3719 	EXP 	unnamed TextStim: autoDraw = True
+109.8369 	EXP 	unnamed TextStim: autoDraw = False
+109.8369 	EXP 	unnamed TextStim: autoDraw = True
+109.8467 	EXP 	unnamed TextStim: autoDraw = False
+109.8467 	EXP 	unnamed TextStim: autoDraw = True
+109.8467 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+110.0502 	EXP 	unnamed TextStim: autoDraw = False
+110.0502 	EXP 	unnamed TextStim: autoDraw = True
+110.3548 	EXP 	unnamed TextStim: autoDraw = False
+110.3548 	EXP 	unnamed TextStim: autoDraw = True
+110.3548 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+112.3550 	DATA 	No keypress (maxWait exceeded)
+112.3597 	EXP 	unnamed TextStim: autoDraw = False
+112.3597 	EXP 	unnamed TextStim: autoDraw = True
+118.3240 	EXP 	unnamed TextStim: autoDraw = False
+118.3240 	EXP 	unnamed TextStim: autoDraw = True
+118.3341 	EXP 	unnamed TextStim: autoDraw = False
+118.3341 	EXP 	unnamed TextStim: autoDraw = True
+118.3341 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+118.5375 	EXP 	unnamed TextStim: autoDraw = False
+118.5375 	EXP 	unnamed TextStim: autoDraw = True
+118.8430 	EXP 	unnamed TextStim: autoDraw = False
+118.8430 	EXP 	unnamed TextStim: autoDraw = True
+118.8430 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/lllll.bmp'
+120.8432 	DATA 	No keypress (maxWait exceeded)
+120.8478 	EXP 	unnamed TextStim: autoDraw = False
+120.8478 	EXP 	unnamed TextStim: autoDraw = True
+123.3129 	EXP 	unnamed TextStim: autoDraw = False
+123.3129 	EXP 	unnamed TextStim: autoDraw = True
+123.3250 	EXP 	unnamed TextStim: autoDraw = False
+123.3250 	EXP 	unnamed TextStim: autoDraw = True
+123.3250 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+123.5286 	EXP 	unnamed TextStim: autoDraw = False
+123.5286 	EXP 	unnamed TextStim: autoDraw = True
+124.5855 	EXP 	unnamed TextStim: autoDraw = False
+124.5855 	EXP 	unnamed TextStim: autoDraw = True
+124.5855 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+126.5857 	DATA 	No keypress (maxWait exceeded)
+126.5921 	EXP 	unnamed TextStim: autoDraw = False
+126.5921 	EXP 	unnamed TextStim: autoDraw = True
+128.0574 	EXP 	unnamed TextStim: autoDraw = False
+128.0574 	EXP 	unnamed TextStim: autoDraw = True
+128.0667 	EXP 	unnamed TextStim: autoDraw = False
+128.0667 	EXP 	unnamed TextStim: autoDraw = True
+128.0667 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+128.2701 	EXP 	unnamed TextStim: autoDraw = False
+128.2701 	EXP 	unnamed TextStim: autoDraw = True
+134.8289 	EXP 	unnamed TextStim: autoDraw = False
+134.8289 	EXP 	unnamed TextStim: autoDraw = True
+134.8289 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+135.4495 	DATA 	Keypress: f
+135.4535 	EXP 	unnamed TextStim: autoDraw = False
+135.4535 	EXP 	unnamed TextStim: autoDraw = True
+138.5482 	EXP 	unnamed TextStim: autoDraw = False
+138.5482 	EXP 	unnamed TextStim: autoDraw = True
+138.5588 	EXP 	unnamed TextStim: autoDraw = False
+138.5588 	EXP 	unnamed TextStim: autoDraw = True
+138.5588 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+138.7624 	EXP 	unnamed TextStim: autoDraw = False
+138.7624 	EXP 	unnamed TextStim: autoDraw = True
+145.3192 	EXP 	unnamed TextStim: autoDraw = False
+145.3192 	EXP 	unnamed TextStim: autoDraw = True
+145.3192 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/llrll.bmp'
+146.3000 	DATA 	Keypress: j
+146.3045 	EXP 	unnamed TextStim: autoDraw = False
+146.3045 	EXP 	unnamed TextStim: autoDraw = True
+150.2888 	EXP 	unnamed TextStim: autoDraw = False
+150.2888 	EXP 	unnamed TextStim: autoDraw = True
+150.2990 	EXP 	unnamed TextStim: autoDraw = False
+150.2990 	EXP 	unnamed TextStim: autoDraw = True
+150.2990 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+150.5025 	EXP 	unnamed TextStim: autoDraw = False
+150.5025 	EXP 	unnamed TextStim: autoDraw = True
+153.8084 	EXP 	unnamed TextStim: autoDraw = False
+153.8084 	EXP 	unnamed TextStim: autoDraw = True
+153.8084 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrrrr.bmp'
+154.4099 	DATA 	Keypress: j
+154.4137 	EXP 	unnamed TextStim: autoDraw = False
+154.4137 	EXP 	unnamed TextStim: autoDraw = True
+158.7781 	EXP 	unnamed TextStim: autoDraw = False
+158.7781 	EXP 	unnamed TextStim: autoDraw = True
+158.7932 	EXP 	unnamed TextStim: autoDraw = False
+158.7932 	EXP 	unnamed TextStim: autoDraw = True
+158.7932 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+158.9966 	EXP 	unnamed TextStim: autoDraw = False
+158.9966 	EXP 	unnamed TextStim: autoDraw = True
+160.0535 	EXP 	unnamed TextStim: autoDraw = False
+160.0535 	EXP 	unnamed TextStim: autoDraw = True
+160.0535 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/llrll.bmp'
+160.8108 	DATA 	Keypress: j
+160.8147 	EXP 	unnamed TextStim: autoDraw = False
+160.8147 	EXP 	unnamed TextStim: autoDraw = True
+163.5234 	EXP 	unnamed TextStim: autoDraw = False
+163.5234 	EXP 	unnamed TextStim: autoDraw = True
+163.5326 	EXP 	unnamed TextStim: autoDraw = False
+163.5326 	EXP 	unnamed TextStim: autoDraw = True
+163.5326 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+163.7361 	EXP 	unnamed TextStim: autoDraw = False
+163.7361 	EXP 	unnamed TextStim: autoDraw = True
+166.5425 	EXP 	unnamed TextStim: autoDraw = False
+166.5425 	EXP 	unnamed TextStim: autoDraw = True
+166.5425 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+167.7425 	DATA 	Keypress: f
+167.7463 	EXP 	unnamed TextStim: autoDraw = False
+167.7463 	EXP 	unnamed TextStim: autoDraw = True
+172.5115 	EXP 	unnamed TextStim: autoDraw = False
+172.5115 	EXP 	unnamed TextStim: autoDraw = True
+172.5240 	EXP 	unnamed TextStim: autoDraw = False
+172.5240 	EXP 	unnamed TextStim: autoDraw = True
+172.5240 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/symbolstarbig.bmp'
+172.7275 	EXP 	unnamed TextStim: autoDraw = False
+172.7275 	EXP 	unnamed TextStim: autoDraw = True
+173.0322 	EXP 	unnamed TextStim: autoDraw = False
+173.0322 	EXP 	unnamed TextStim: autoDraw = True
+173.0322 	EXP 	unnamed ImageStim: image = '/Users/xiaoqianxiao/Documents/work/experiments/ANT/experiment_design/stimuli/rrlrr.bmp'
+173.7513 	DATA 	Keypress: f
+173.7548 	EXP 	unnamed TextStim: autoDraw = False
+173.7548 	EXP 	unnamed TextStim: autoDraw = True
+177.5016 	EXP 	unnamed TextStim: autoDraw = False
+178.1148 	EXP 	window1: mouseVisible = True

@@ -9,16 +9,14 @@ import numpy as np
 from datetime import datetime
 #%%
 input_subID = 0
-input_runID = 1
-input_session = 'pre'
+input_session = 'prac'
 #%%
-runID = str(input_runID).zfill(2)
 subID = str(input_subID).zfill(3)
 sessionID = input_session
 current_dir = os.getcwd()
 #%%
 expName = 'ANT'
-expInfo = {'subID': subID, 'sessionID': sessionID, 'runID':runID}
+expInfo = {'subID': subID, 'sessionID': sessionID}
 expInfo['time'] = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
 #%%
 dlg = gui.DlgFromDict(dictionary=expInfo, title='My Experiment')
@@ -28,7 +26,7 @@ if dlg.OK == False:
 results_dir = os.path.join(current_dir, 'results')
 if not os.path.exists(results_dir):
     os.makedirs(results_dir)
-resultFile_name = 'sub-' + subID + '_ses-' + sessionID + '_run-' + runID + '_time-' + expInfo['time']
+resultFile_name = 'prac_sub-' + subID + '_time-' + expInfo['time']
 thisExp = data.ExperimentHandler(
     name=expName, version='0.1',
     extraInfo=expInfo, runtimeInfo=None,
@@ -42,8 +40,8 @@ logging.console.setLevel(logging.ERROR)
 #%%
 # Initialize PsychoPy window
 win = visual.Window(
-    # size=(640, 480),
-    fullscr=True,
+    #size=(640, 480),
+     fullscr=True,
     screen=0, allowGUI=True, allowStencil=False,
     monitor='testMonitor',
     color="white",
@@ -85,7 +83,7 @@ trialClock = core.Clock()
 
 run_intro(win, intro_text)
 # Run IFISBlockList equivalent
-mean_rt, mean_acc = run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name)
+mean_rt, mean_acc = run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name)
 # Run Goodbye
 run_goodbye(win, goodbye_text)
 mean_rt = round(np.mean(np.ma.masked_equal(rt_list, None)) * 1000)

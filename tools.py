@@ -1,140 +1,238 @@
 # Function to update attributes
-def setAttrib(attr, value):
-    trialAttributes[attr] = value
-def getAttrib(attr):
-    return trialAttributes[attr]
-# Function to initialize text display defaults
-def InitTextDisplayDefaults(win, text_content=""):
-    text_display = visual.TextStim(
-        win=win,
-        text=text_content,
-        pos=(0, 0),  # Center position
-        color="black",  # Foreground color
-        colorSpace='rgb',
-        height=18,  # Font size
-        wrapWidth=win.size[0],  # Word wrap width set to window width
-        font="Courier New",  # Font name
-        bold=True,  # Font bold
-        italic=False,  # Font italic
-        alignHoriz="center",  # Horizontal alignment
-        alignVert="center"  # Vertical alignment
-    )
-    return text_display
+from psychopy import visual, event, core, data, logging
+import os
+import pandas as pd
 
-def InitSlideImageDefaults(win, image_path):
-    # Check if image path is None or empty
-    if not image_path:
-        return None
-    # Create an ImageStim with default properties
-    theSlideImage = visual.ImageStim(
-        win=win,
-        image=image_path,
-        size=None,  # Preserve original size by default
-        units='pix',  # You can adjust this based on your requirement
-        interpolate=True  # Enable interpolation for better quality
-    )
-    # Set additional properties equivalent to E-Prime defaults
-    theSlideImage.mirror = False  # Equivalent to MirrorLeftRight and MirrorUpDown being "No"
-    return theSlideImage
-def init_intro(win):
-    intro_text = visual.TextStim(win, text="Welcome to the experiment. Press a key to continue...", pos=(0, 0), color="black")
+def setAttrib(trialAttributes, attr, value):
+    trialAttributes[attr] = value
+
+def getAttrib(trialAttributes, attr):
+    return trialAttributes[attr]
+
+def init_intro(win, win_width):
+    intro_text = visual.TextStim(win, text="Please press left point finger when the cental arrowhead points left \n \nand press right pointing finger when the central arrowhead poin right",
+                                 height=0.08,  # Font size
+                                 bold=False,  # Font bold
+                                 wrapWidth=0.8 * win_width,  # 5% of window width
+                                 font='DejaVu Sans',
+                                 pos=(0, 0),
+                                 color="black")
     return intro_text
-def init_goodbye(win):
-    goodbye_text = visual.TextStim(win, text="Thank you for participating. Press a key to exit...", pos=(0, 0), color="black")
+
+def init_goodbye(win, win_width):
+    goodbye_text = visual.TextStim(win, text="Thank-you for your attention. \n \nThis task is complete. Please wait.",
+                                   height=0.08,  # Font size
+                                   bold=False,  # Font bold
+                                   wrapWidth=0.8 * win_width,  # 5% of window width
+                                   font='DejaVu Sans',
+                                   pos=(0, 0),
+                                   color="black")
     return goodbye_text
-def run_intro(intro_text):
+
+def run_intro(win, intro_text):
     intro_text.draw()
     win.flip()
     keys = event.waitKeys(keyList=["s"], clearEvents=True)
     return keys
-def run_goodbye(goodbye_text):
+
+def run_goodbye(win, goodbye_text):
     goodbye_text.draw()
     win.flip()
-    event.waitKeys()
-def run_runs(runID):
+    core.wait(0.6)
+    #event.waitKeys()
+
+def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name):
     current_dir = os.getcwd()
     stimList_name = 'run-' + str(runID) + '.csv'
     stimList_dir = os.path.join(current_dir, 'experiment_design', 'stim_lists', stimList_name)
+    stim_dir = os.path.join(current_dir, 'experiment_design', 'stimuli')
     stimList = pd.read_csv(stimList_dir)
+    stimList['TargetPosition_center0'] = (240 - stimList['TargetPosition'])/240
+    stimList.loc[stimList['TargetPosition']==-100,'TargetPosition_center0'] = -1000
+    stimList['CuePositionY_center0'] = (240-stimList['CuePositionY'])/240
+    stimList.loc[stimList['CuePositionY']==-100,'CuePositionY_center0'] = -1000
+    correct_responses = {
+        "left": "f",
+        "right": "j"
+    }
+    # Clock for timing
+    trialClock.reset()
     for index, row in stimList.iterrows():
         trialAttributes = row.to_dict()
-        # Define stimuli
-        fixation_start = visual.TextStim(win, text='+', height=0.1)
-        warning = visual.ImageStim(win, image=getAttrib('TargetFilePath') + 'symbolstarbig.bmp', pos=(0, getAttrib('CuePositionY')))
-        warning2 = visual.ImageStim(win, image=getAttrib('TargetFilePath') + 'symbolstarbig.bmp', pos=(0, getAttrib('CuePositionY2')))
-        fixation_middle = visual.TextStim(win, text='+', height=0.1)
-        target = visual.ImageStim(win, image=getAttrib('TargetFilePath') + getAttrib('TargetImage') + '.bmp', pos=(0, getAttrib('TargetPosition')))
-        fixation_end = visual.TextStim(win, text='+', height=0.1)
-        # Start routine for fixation start
-        fixation_start.draw()
+        thisExp.addData('TrialNumber', trialAttributes['TrialNumber'])
+        thisExp.addData('WarningType', trialAttributes['WarningType'])
+        thisExp.addData('TargetType', trialAttributes['TargetType'])
+        thisExp.addData('FlankingType', trialAttributes['FlankingType'])
+        thisExp.addData('TargetDirection', trialAttributes['TargetDirection'])
+        thisExp.addData('CorrectAnswer', correct_responses[trialAttributes['TargetDirection']])
+        # Duration of fixation
+        setAttrib(trialAttributes, "DurationOfFixation", getAttrib(trialAttributes, "DurationOfFixation"))
+        setAttrib(trialAttributes, "IntervalBetweenCueAndTarget", getAttrib(trialAttributes, "IntervalBetweenCueAndTarget") + 300)
+        # Fixation start
+        #fixation_text.draw()
+        fixation_text.setAutoDraw(True)
         win.flip()
-        core.wait(getAttrib('DurationOfFixation') / 1000)
-        # Update onset attributes (dummy values for illustration)
-        setAttrib('SlideFixationStart.OnsetDelay', 0)
-        setAttrib('SlideFixationStart.OnsetTime', core.getTime())
-        setAttrib('SlideFixationStart.DurationError', 0)
-        # Start routine for warning
-        warning.draw()
-        warning2.draw()
+        thisExp.addData('fixationStart_onsetTime', trialClock.getTime())
+        core.wait(getAttrib(trialAttributes, "DurationOfFixation") / 1000)
+        fixation_text.setAutoDraw(False)
+        # Warning slide
+        fixation_text.setAutoDraw(True)
+        warning_image_1.setImage(os.path.join(stim_dir, "symbolstarbig.bmp"))
+        warning_image_1.setPos((0, getAttrib(trialAttributes, "CuePositionY_center0")))
+        warning_image_1.draw()
         win.flip()
-        core.wait(getAttrib('IntervalBetweenCueAndTarget') / 1000)
-        # Start routine for fixation middle
-        fixation_middle.draw()
+        thisExp.addData('cue_onsetTime', trialClock.getTime())
+        core.wait(0.2)  # Assume some duration for the warning
+        fixation_text.setAutoDraw(False)
+        # Middle fixation
+        fixation_text.setAutoDraw(True)
         win.flip()
-        core.wait(getAttrib('IntervalBetweenCueAndTarget') / 1000)
-        # Start routine for target
-        target.draw()
+        thisExp.addData('fixationMiddle_onsetTime', trialClock.getTime())
+        core.wait(getAttrib(trialAttributes, "IntervalBetweenCueAndTarget") / 1000)
+        fixation_text.setAutoDraw(False)
+        # Target slide
+        fixation_text.setAutoDraw(True)
+        target_image.setImage(os.path.join(stim_dir, getAttrib(trialAttributes, "TargetImage") + ".bmp"))
+        target_image.setPos((0, getAttrib(trialAttributes, "TargetPosition_center0")))
+        target_image.draw()
         win.flip()
-        keys = event.waitKeys(maxWait=getAttrib('DurationOfTarget') / 1000, keyList=['space'], timeStamped=True)
-        # Update target response attributes
+        target_onsetTime = trialClock.getTime()
+        thisExp.addData('target_onsetTime', target_onsetTime)
+        # Response collection
+        keys = event.waitKeys(maxWait=getAttrib(trialAttributes, "DurationOfTarget")/ 1000, keyList=['f', 'j', 'escape', '1', '2', '3', '4'], timeStamped=trialClock)
         if keys:
-            key, rt = keys[0]
-            setAttrib('SlideTarget.RT', rt)
-            setAttrib('SlideTarget.RESP', key)
-            setAttrib('SlideTarget.ACC', 1 if key == getAttrib('CorrectAnswer') else 0)
+            response, reaction_time = keys[0]
+            if response == 'escape':
+                resultFile_name = "tmp_" + resultFile_name
+                resultFile_path = resultFile_path = os.path.join(results_dir, resultFile_name)
+                thisExp.saveAsWideText(resultFile_path)
+                core.quit()
+            acc = 1 if response == correct_responses[trialAttributes['TargetDirection']] else 0
+            thisExp.addData('reaction_time', reaction_time)
+            rt = reaction_time - target_onsetTime
         else:
-            setAttrib('SlideTarget.RT', None)
-            setAttrib('SlideTarget.RESP', None)
-            setAttrib('SlideTarget.ACC', 0)
+            response = None
+            reaction_time = None
+            rt = None
+            acc = 0
+        rt_list.append(rt)  # Store rt for current trial
+        acc_list.append(acc)  # Store rt for current trial
+        fixation_text.setAutoDraw(False)
+        thisExp.addData('reaction_time', reaction_time)
+        thisExp.addData('RT', rt)
+        thisExp.addData('response', response)
+        thisExp.addData('ACC', acc)
 
-        # Provide feedback (dummy feedback)
-        #feedback_text = "ACC=%s, RESP=%s, RT=%s" % (getAttrib('SlideTarget.ACC'), getAttrib('SlideTarget.RESP'), getAttrib('SlideTarget.RT'))
-        #feedback = visual.TextStim(win, text=feedback_text)
-        #feedback.draw()
-        #win.flip()
-        #core.wait(1)  # Display feedback for 1 second
-        # Adjust fixation end duration
-        if getAttrib('SlideTarget.RT'):
-            setAttrib('DurationOfFixationEnd', getAttrib('DurationOfFixationEnd') - getAttrib('DurationOfFixation') + (2000 - getAttrib('SlideTarget.RT')) + 1000 - 40)
+        # Fixation end
+        if reaction_time is not None:
+            setAttrib(trialAttributes, "DurationOfFixationEnd", getAttrib(trialAttributes, "DurationOfFixationEnd") - getAttrib(trialAttributes, "DurationOfFixation") + (2000 - rt * 1000) + 1000 - 40)
         else:
-            setAttrib('DurationOfFixationEnd', getAttrib('DurationOfFixationEnd') - getAttrib('DurationOfFixation') + 1000 - 40)
-        pass
-        # Start routine for fixation end
-        fixation_end.draw()
+            setAttrib(trialAttributes, "DurationOfFixationEnd", getAttrib(trialAttributes, "DurationOfFixationEnd") - getAttrib(trialAttributes, "DurationOfFixation") + 1000 - 40)
+
+        fixation_text.setAutoDraw(True)
         win.flip()
-        core.wait(getAttrib('DurationOfFixationEnd') / 1000)
-    thisExp.addData('SlideTarget.RT', getAttrib('SlideTarget.RT'))
-    thisExp.addData('SlideTarget.ACC', getAttrib('SlideTarget.ACC'))
-    thisExp.addData('SlideTarget.RESP', getAttrib('SlideTarget.RESP'))
-    thisExp.nextEntry()
-def session_proc_run():
-    logging.console.setLevel(logging.DATA)  # Set the logging level to DATA
-    # Run Intro
-    run_intro(intro_text)
-    # Run IFISBlockList equivalent
-    run_block(block)
-    # Run Goodbye
-    run_goodbye(goodbye_text)
-    # Log the context (for the sake of this example, we'll log a simple message)
-    logging.log(level=logging.DATA, msg="Session completed")
+        thisExp.addData('fixationEnd_onsetTime', target_onsetTime)
+        core.wait(getAttrib(trialAttributes, "DurationOfFixationEnd") / 1000)
+        fixation_text.setAutoDraw(False)
+        # end of trial - move to next line in data output
+        thisExp.nextEntry()
+    return rt_list, acc_list
 
+def run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name):
+    current_dir = os.getcwd()
+    stimList_name = 'run-prac.csv'
+    stimList_dir = os.path.join(current_dir, 'experiment_design', 'stim_lists', stimList_name)
+    stim_dir = os.path.join(current_dir, 'experiment_design', 'stimuli')
+    stimList = pd.read_csv(stimList_dir)
+    stimList['TargetPosition_center0'] = (240 - stimList['TargetPosition'])/240
+    stimList.loc[stimList['TargetPosition']==-100,'TargetPosition_center0'] = -1000
+    stimList['CuePositionY_center0'] = (240-stimList['CuePositionY'])/240
+    stimList.loc[stimList['CuePositionY']==-100,'CuePositionY_center0'] = -1000
+    correct_responses = {
+        "left": "f",
+        "right": "j"
+    }
+    trials_all = stimList.sample(frac=1).reset_index(drop=True)
+    trials = trials_all.iloc[0:23,:]
+    # Clock for timing
+    trialClock.reset()
+    for index, row in trials.iterrows():
+        trialAttributes = row.to_dict()
+        thisExp.addData('TrialNumber', trialAttributes['TrialNumber'])
+        thisExp.addData('WarningType', trialAttributes['WarningType'])
+        thisExp.addData('TargetType', trialAttributes['TargetType'])
+        thisExp.addData('FlankingType', trialAttributes['FlankingType'])
+        thisExp.addData('TargetDirection', trialAttributes['TargetDirection'])
+        thisExp.addData('CorrectAnswer', correct_responses[trialAttributes['TargetDirection']])
+        # Duration of fixation
+        setAttrib(trialAttributes, "DurationOfFixation", getAttrib(trialAttributes, "DurationOfFixation"))
+        setAttrib(trialAttributes, "IntervalBetweenCueAndTarget", getAttrib(trialAttributes, "IntervalBetweenCueAndTarget") + 300)
+        # Fixation start
+        #fixation_text.draw()
+        fixation_text.setAutoDraw(True)
+        win.flip()
+        thisExp.addData('fixationStart_onsetTime', trialClock.getTime())
+        core.wait(getAttrib(trialAttributes, "DurationOfFixation") / 1000)
+        fixation_text.setAutoDraw(False)
+        # Warning slide
+        fixation_text.setAutoDraw(True)
+        warning_image_1.setImage(os.path.join(stim_dir, "symbolstarbig.bmp"))
+        warning_image_1.setPos((0, getAttrib(trialAttributes, "CuePositionY_center0")))
+        warning_image_1.draw()
+        win.flip()
+        thisExp.addData('cue_onsetTime', trialClock.getTime())
+        core.wait(0.2)  # Assume some duration for the warning
+        fixation_text.setAutoDraw(False)
+        # Middle fixation
+        fixation_text.setAutoDraw(True)
+        win.flip()
+        thisExp.addData('fixationMiddle_onsetTime', trialClock.getTime())
+        core.wait(getAttrib(trialAttributes, "IntervalBetweenCueAndTarget") / 1000)
+        fixation_text.setAutoDraw(False)
+        # Target slide
+        fixation_text.setAutoDraw(True)
+        target_image.setImage(os.path.join(stim_dir, getAttrib(trialAttributes, "TargetImage") + ".bmp"))
+        target_image.setPos((0, getAttrib(trialAttributes, "TargetPosition_center0")))
+        target_image.draw()
+        win.flip()
+        target_onsetTime = trialClock.getTime()
+        thisExp.addData('target_onsetTime', target_onsetTime)
+        # Response collection
+        keys = event.waitKeys(maxWait=getAttrib(trialAttributes, "DurationOfTarget")/ 1000, keyList=['f', 'j', 'escape', '1', '2', '3', '4'], timeStamped=trialClock)
+        if keys:
+            response, reaction_time = keys[0]
+            if response == 'escape':
+                resultFile_name = "tmp_prac" + resultFile_name
+                resultFile_path = resultFile_path = os.path.join(results_dir, resultFile_name)
+                thisExp.saveAsWideText(resultFile_path)
+                core.quit()
+            acc = 1 if response == correct_responses[trialAttributes['TargetDirection']] else 0
+            thisExp.addData('reaction_time', reaction_time)
+            rt = reaction_time - target_onsetTime
+        else:
+            response = None
+            reaction_time = None
+            rt = None
+            acc = 0
+        rt_list.append(rt)  # Store rt for current trial
+        acc_list.append(acc)  # Store rt for current trial
+        fixation_text.setAutoDraw(False)
+        thisExp.addData('reaction_time', reaction_time)
+        thisExp.addData('RT', rt)
+        thisExp.addData('response', response)
+        thisExp.addData('ACC', acc)
 
+        # Fixation end
+        if reaction_time is not None:
+            setAttrib(trialAttributes, "DurationOfFixationEnd", getAttrib(trialAttributes, "DurationOfFixationEnd") - getAttrib(trialAttributes, "DurationOfFixation") + (2000 - rt * 1000) + 1000 - 40)
+        else:
+            setAttrib(trialAttributes, "DurationOfFixationEnd", getAttrib(trialAttributes, "DurationOfFixationEnd") - getAttrib(trialAttributes, "DurationOfFixation") + 1000 - 40)
 
-# Create and initialize the text display
-startInstruction_display = InitTextDisplayDefaults(win, text_content=startInstruction_Text)
-# Drawing the stimulus
-startInstruction_display.draw()
-# Flip the window to update the display
-win.flip()
-# Wait for a key press to end
-event.waitKeys(keyList=['s'])
+        fixation_text.setAutoDraw(True)
+        win.flip()
+        thisExp.addData('fixationEnd_onsetTime', target_onsetTime)
+        core.wait(getAttrib(trialAttributes, "DurationOfFixationEnd") / 1000)
+        fixation_text.setAutoDraw(False)
+        # end of trial - move to next line in data output
+        thisExp.nextEntry()
+    return rt_list, acc_list
