@@ -134,7 +134,7 @@ def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, 
         thisExp.nextEntry()
     return rt_list, acc_list
 
-def run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name):
+def run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name, used_keyList, correct_responses):
     current_dir = os.getcwd()
     stimList_name = 'run-prac.csv'
     stimList_dir = os.path.join(current_dir, 'experiment_design', 'stim_lists', stimList_name)
@@ -144,10 +144,6 @@ def run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialCl
     stimList.loc[stimList['TargetPosition']==-100,'TargetPosition_center0'] = -1000
     stimList['CuePositionY_center0'] = (240-stimList['CuePositionY'])/240
     stimList.loc[stimList['CuePositionY']==-100,'CuePositionY_center0'] = -1000
-    correct_responses = {
-        "left": "f",
-        "right": "j"
-    }
     trials_all = stimList.sample(frac=1).reset_index(drop=True)
     trials = trials_all.iloc[0:23,:]
     # Clock for timing
