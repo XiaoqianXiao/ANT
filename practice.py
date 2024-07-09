@@ -16,10 +16,25 @@ current_dir = os.getcwd()
 expName = 'ANT'
 expInfo = {'subID': subID, 'sessionID': sessionID}
 expInfo['time'] = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+expInfo['location'] = ['CHN', 'CONNECTLAB']
 #%%
 dlg = gui.DlgFromDict(dictionary=expInfo, title='My Experiment')
 if dlg.OK == False:
     core.quit()  # User pressed cancel
+if expInfo['location'] == 'CHN':
+    used_keyList = ['t', 'escape', '2', '3']
+    trigger_keyList = ['t']
+    correct_responses = {
+        "left": "2",
+        "right": "3"
+    }
+else:
+    used_keyList = ['s', 'escape', 'f', 'j']
+    trigger_keyList = ['s']
+    correct_responses = {
+        "left": "f",
+        "right": "j"
+    }
 #Initialize the results file
 results_dir = os.path.join(current_dir, 'results')
 if not os.path.exists(results_dir):
@@ -81,7 +96,7 @@ trialClock = core.Clock()
 
 run_intro(win, intro_text)
 # Run IFISBlockList equivalent
-mean_rt, mean_acc = run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name)
+mean_rt, mean_acc = run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name, used_keyList, correct_responses)
 # Run Goodbye
 run_goodbye(win, goodbye_text)
 masked_rt_list = np.ma.masked_equal(rt_list, None)

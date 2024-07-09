@@ -29,19 +29,19 @@ def init_goodbye(win, win_width):
                                    color="black")
     return goodbye_text
 
-def run_intro(win, intro_text):
+def run_intro(win, intro_text, trigger_keyList):
     intro_text.draw()
     win.flip()
-    keys = event.waitKeys(keyList=["s"], clearEvents=True)
+    keys = event.waitKeys(keyList=trigger_keyList, clearEvents=True)
     return keys
 
 def run_goodbye(win, goodbye_text):
     goodbye_text.draw()
     win.flip()
-    core.wait(0.6)
+    core.wait(1)
     #event.waitKeys()
 
-def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name):
+def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, trialClock, rt_list, acc_list, results_dir, resultFile_name, used_keyList, correct_responses):
     current_dir = os.getcwd()
     stimList_name = 'run-' + str(runID) + '.csv'
     stimList_dir = os.path.join(current_dir, 'experiment_design', 'stim_lists', stimList_name)
@@ -51,10 +51,6 @@ def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, 
     stimList.loc[stimList['TargetPosition']==-100,'TargetPosition_center0'] = -1000
     stimList['CuePositionY_center0'] = (240-stimList['CuePositionY'])/240
     stimList.loc[stimList['CuePositionY']==-100,'CuePositionY_center0'] = -1000
-    correct_responses = {
-        "left": "f",
-        "right": "j"
-    }
     # Clock for timing
     trialClock.reset()
     for index, row in stimList.iterrows():
@@ -99,7 +95,7 @@ def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, 
         target_onsetTime = trialClock.getTime()
         thisExp.addData('target_onsetTime', target_onsetTime)
         # Response collection
-        keys = event.waitKeys(maxWait=getAttrib(trialAttributes, "DurationOfTarget")/ 1000, keyList=['f', 'j', 'escape', '1', '2', '3', '4'], timeStamped=trialClock)
+        keys = event.waitKeys(maxWait=getAttrib(trialAttributes, "DurationOfTarget")/ 1000, keyList=used_keyList, timeStamped=trialClock)
         if keys:
             response, reaction_time = keys[0]
             if response == 'escape':
