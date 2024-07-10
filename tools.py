@@ -100,7 +100,7 @@ def run_runs(win, runID, thisExp, fixation_text, warning_image_1, target_image, 
             response, reaction_time = keys[0]
             if response == 'escape':
                 resultFile_name = "tmp_" + resultFile_name
-                resultFile_path = resultFile_path = os.path.join(results_dir, resultFile_name)
+                resultFile_path = os.path.join(results_dir, resultFile_name)
                 thisExp.saveAsWideText(resultFile_path)
                 core.quit()
             acc = 1 if response == correct_responses[trialAttributes['TargetDirection']] else 0
@@ -195,7 +195,7 @@ def run_prac(win, thisExp, fixation_text, warning_image_1, target_image, trialCl
             response, reaction_time = keys[0]
             if response == 'escape':
                 resultFile_name = "tmp_prac" + resultFile_name
-                resultFile_path = resultFile_path = os.path.join(results_dir, resultFile_name)
+                resultFile_path = os.path.join(results_dir, resultFile_name)
                 thisExp.saveAsWideText(resultFile_path)
                 core.quit()
             acc = 1 if response == correct_responses[trialAttributes['TargetDirection']] else 0
