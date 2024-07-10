@@ -57,6 +57,9 @@ win = visual.Window(
 )
 # Hide the cursor
 win.mouseVisible = False
+#win.setMouseVisible(False)
+#mouse = event.Mouse(win=win)
+#mouse.setVisible(False)
 # Get the size of the window
 win_width, win_height = win.size
 # Initialize components
