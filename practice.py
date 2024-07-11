@@ -10,11 +10,10 @@ from datetime import datetime
 #%%
 input_subID = 0
 input_session = 'prac'
-subID = str(input_subID).zfill(3)
 sessionID = input_session
 current_dir = os.getcwd()
 expName = 'ANT'
-expInfo = {'subID': subID, 'sessionID': sessionID}
+expInfo = {'subID': str(input_subID), 'sessionID': sessionID}
 expInfo['time'] = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
 #expInfo['location'] = ['CHN', 'CONNECTLAB']
 #%%
@@ -32,6 +31,7 @@ correct_responses = {
 results_dir = os.path.join(current_dir, 'results')
 if not os.path.exists(results_dir):
     os.makedirs(results_dir)
+subID = expInfo['subID'].zfill(3)
 resultFile_name = 'prac_sub-' + subID + '_time-' + expInfo['time']
 thisExp = data.ExperimentHandler(
     name=expName, version='0.1',

@@ -33,6 +33,7 @@ def run_intro(win, intro_text, trigger_keyList):
     intro_text.draw()
     win.flip()
     keys = event.waitKeys(keyList=trigger_keyList, clearEvents=True)
+    core.wait(1)
     return keys
 
 def run_goodbye(win, goodbye_text):
